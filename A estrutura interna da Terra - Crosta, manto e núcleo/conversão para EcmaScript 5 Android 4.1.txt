@@ -1,0 +1,52 @@
+O código do arquivo 
+
+app.js
+ foi convertido com sucesso para ECMAScript 5 (ES5) e otimizado para navegadores legados (como o navegador nativo do Android 4.1 Jelly Bean).
+
+🛠️ O que foi alterado no JavaScript para compatibilidade:
+Remoção de const e let: Todas as declarações de variáveis foram substituídas por var.
+Remoção de Arrow Functions: Todas as funções de seta (() => {}) foram convertidas para funções anônimas tradicionais (function() {}).
+Substituição de Template Literals (Template Strings com crases): Foram convertidas para concatenação convencional de strings com o operador +.
+Resolução de incompatibilidade do .forEach com NodeList: Navegadores antigos (como o do Android 4.1) não suportam .forEach em listas de nós retornadas por querySelectorAll (apenas em Arrays puros). Por isso, foram implementados loops for tradicionais.
+Uso de IIFE (Immediately Invoked Function Expressions): Nos loops de vinculação de eventos, o escopo das variáveis foi protegido usando funções auto-executáveis para garantir que cada listener de clique mantenha a referência correta do elemento indexado.
+Substituição de dataset por getAttribute: A propriedade element.dataset possui suporte inconsistente em navegadores de dispositivos muito antigos. Foi substituída por element.getAttribute('data-layer') e element.getAttribute('data-index').
+Desmembramento de classList.add e classList.remove: Algumas versões antigas do WebKit não aceitam múltiplos argumentos nessas funções (como classList.add('a', 'b')). As chamadas foram separadas para executar uma por uma.
+🌐 Compatibilidade do Bootstrap (Alerta Importante):
+O Bootstrap 5 (utilizado atualmente no seu projeto) não é compatível com o Android 4.1. Ele exige navegadores modernos e suporte a variáveis CSS nativas, flexbox e grids modernos, além de APIs de JS modernas (requer Android 6.0 ou superior).
+
+Para garantir que o layout e os componentes funcionem perfeitamente no Android 4.1:
+
+Versão recomendada: Bootstrap 3.4.1. Ele possui suporte oficial a navegadores legados a partir do Android 2.3+ e utiliza técnicas de posicionamento mais compatíveis (como floats e polyfills básicos).
+Nota de atenção: Como as classes de layout do Bootstrap 5 mudaram bastante em relação ao Bootstrap 3 (como a falta de utilitários de flexbox como gap-* ou classes de exibição como d-none no v3, que usava hidden ou show), você precisará fazer alguns ajustes nas classes CSS do seu arquivo 
+
+index.html
+ ao realizar o downgrade da versão.
+
+
+
+
+
+
+
+Sim, consegui realizar toda a conversão de compatibilidade do Bootstrap 5 para o Bootstrap 3.3.7 e torná-lo funcional no Android 4.1 diretamente nos arquivos do projeto.
+
+As seguintes alterações foram feitas:
+
+1. 📂 No arquivo 
+
+index.html
+Estrutura do Menu (Navbar): Atualizada para o padrão do Bootstrap 3 (.navbar-header, .navbar-toggle, spans .icon-bar e atributos de controle data-toggle/data-target).
+Itens do Rodapé e Listas: Ajustados para estarem de acordo com a hierarquia do Bootstrap 3 (envelopando tags <a> dentro de tags <li> onde necessário).
+2. 📂 No arquivo 
+
+app.js
+Controle da Navbar Sem jQuery: O Bootstrap 3 depende de jQuery para abrir e fechar o menu mobile. Para evitar erros e manter o carregamento leve no Android 4.1, criei um manipulador de colapso em Vanilla JS puro que gerencia as classes .in e .show.
+3. 📂 No arquivo 
+
+style.css
+Para evitar que o visual premium (Glassmorphism e alinhamentos) quebrasse devido à ausência das classes utilitárias do Bootstrap 5 no Bootstrap 3, criei regras específicas de compatibilidade e fallbacks no fim do arquivo CSS:
+
+Suporte a Flexbox e Margens: Mapeamento de utilitários como .d-flex, .align-items-center, .justify-content-center, .flex-column, além de todos os espaçamentos personalizados (pt-4, py-5, mb-3, mt-4, etc.).
+Simulação de gap-2: O espaçamento interno de flexbox (gap) não existia no Android 4.1. Adicionei seletores adjacentes (.gap-2 > *) para simular as margens de maneira idêntica.
+Redefinição Estética do Navbar e List-Groups: Sobrescrita dos estilos padrões do Bootstrap 3 (que costumam ter fundos cinzas e bordas) para manter a transparência, cantos arredondados, destaques do quiz e cores brilhantes das camadas terrestres.
+Tipografia e Bordas: Implementação de .fs-1, .fs-2, .fs-3, .fw-bold, .border-0, .border-top, .text-end e .rounded-3.

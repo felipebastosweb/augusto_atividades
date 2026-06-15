@@ -1,0 +1,4 @@
+crie uma página sobre o tema: A estrutura interna da Terra (Crosta, manto e núcleo. O conteúdo da página deve ser de nível do 6º ANO para as disciplinas de Geografia e Ciências. Devem haver imagens e animações (pode usar javascript). No final da página deve ter questões de multipla escolha para o aluno responder e verificar se acertou ou errou. Utilize as pastas e arquivos internos para formatar a página.
+
+
+

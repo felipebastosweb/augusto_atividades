@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Estrutura Interna da Terra - Ciências e Geografia (6º Ano)</title>
+  <meta name="description"
+    content="Aprenda sobre a Crosta, Manto e Núcleo da Terra de forma interativa com animações, curiosidades e um super quiz para o 6º ano do Ensino Fundamental.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default pt-4">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed border-0" data-toggle="collapse" data-target="#navbarNav">
+          <span class="sr-only">Alternar Navegação</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <span class="fs-3">🌍</span>
+          <span class="fw-bold" style="font-family: var(--font-title);">GeoLíngua</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="nav navbar-nav navbar-right gap-2">
+          <li>
+            <a class="btn btn-secondary-custom btn-nav px-4" href="#aprender">Aprender</a>
+          </li>
+          <li>
+            <a class="btn btn-primary-custom btn-nav px-4" href="#quiz">Testar Conhecimentos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-9">
+          <div class="badge-discipline mb-3">Ciências & Geografia • 6º Ano</div>
+          <h1 class="hero-title">Viagem ao Centro da Terra</h1>
+          <p class="lead-text mt-3 mb-4">
+            Você já se perguntou o que existe debaixo dos nossos pés? Embora a Terra pareça uma grande bola de rocha
+            sólida, por dentro ela é cheia de surpresas e dividida em camadas incríveis!
+          </p>
+          <a href="#aprender" class="btn btn-primary-custom btn-nav px-5 py-3">Iniciar Exploração ➔</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção de Analogia do Ovo -->
+  <section id="aprender" class="analogy-section">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-7">
+          <h2 class="text-white mb-3" style="font-size: 2.2rem;">Como é a Terra por dentro?</h2>
+          <p class="text-slate-300 fs-5">
+            Para entender as camadas da Terra, os cientistas costumam compará-la a um <strong>ovo cozido</strong>. É uma
+            analogia muito simples e perfeita!
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Casca = Crosta -->
+        <div class="col-md-4">
+          <div class="glass-card analogy-card text-center text-md-start">
+            <div class="analogy-img-container mb-3">
+              <span style="font-size: 4rem;">🥚</span>
+            </div>
+            <h4 class="text-white">A Casca do Ovo</h4>
+            <p class="text-secondary" style="font-size: 0.95rem;">
+              Representa a <strong>Crosta Terrestre</strong>. Ela é extremamente fina em comparação com o resto do ovo,
+              rígida e quebradiça. É a camada onde nós pisamos!
+            </p>
+          </div>
+        </div>
+        <!-- Clara = Manto -->
+        <div class="col-md-4">
+          <div class="glass-card analogy-card text-center text-md-start">
+            <div class="analogy-img-container mb-3">
+              <span style="font-size: 4rem;">🍳</span>
+            </div>
+            <h4 class="text-white">A Clara</h4>
+            <p class="text-secondary" style="font-size: 0.95rem;">
+              Representa o <strong>Manto</strong>. É a parte mais grossa do ovo. Na Terra, o manto é composto por rochas
+              muito quentes e pastosas, que se movem lentamente.
+            </p>
+          </div>
+        </div>
+        <!-- Gema = Núcleo -->
+        <div class="col-md-4">
+          <div class="glass-card analogy-card text-center text-md-start">
+            <div class="analogy-img-container mb-3">
+              <span style="font-size: 4rem;">🟡</span>
+            </div>
+            <h4 class="text-white">A Gema</h4>
+            <p class="text-secondary" style="font-size: 0.95rem;">
+              Representa o <strong>Núcleo</strong>. Fica bem no centro, é redonda e, na Terra, é super quente e feita de
+              metais pesados como Ferro e Níquel.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Interativa Principal -->
+  <section class="py-5" style="background: rgba(0,0,0,0.2);">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="text-white">Explore as Camadas Dinamicamente</h2>
+        <p class="text-secondary">Clique em uma das camadas no desenho da Terra ou no menu para ver seus detalhes.</p>
+      </div>
+
+      <div class="row align-items-center g-5">
+        <!-- Coluna da Esquerda: SVG da Terra -->
+        <div class="col-lg-6 text-center">
+          <div class="earth-svg-container">
+            <!-- Atmosfera / Glow de Fundo -->
+            <svg class="earth-svg" viewBox="0 0 400 400" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Gradiente do Espaço / Estrelas -->
+                <radialGradient id="spaceGlow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#2a3056" stop-opacity="0.3" />
+                  <stop offset="100%" stop-color="#0b0d19" stop-opacity="0" />
+                </radialGradient>
+
+                <!-- Gradientes das Camadas -->
+                <linearGradient id="crustGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#a1887f" />
+                  <stop offset="100%" stop-color="#5d4037" />
+                </linearGradient>
+
+                <radialGradient id="mantleGrad" cx="30%" cy="50%" r="70%">
+                  <stop offset="0%" stop-color="#ff7043" />
+                  <stop offset="60%" stop-color="#e64a19" />
+                  <stop offset="100%" stop-color="#bf360c" />
+                </radialGradient>
+
+                <radialGradient id="outerCoreGrad" cx="35%" cy="50%" r="65%">
+                  <stop offset="0%" stop-color="#ffea00" />
+                  <stop offset="60%" stop-color="#ffa000" />
+                  <stop offset="100%" stop-color="#ff6f00" />
+                </radialGradient>
+
+                <radialGradient id="innerCoreGrad" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="70%" stop-color="#fff59d" />
+                  <stop offset="100%" stop-color="#ffd54f" />
+                </radialGradient>
+
+                <linearGradient id="oceanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e88e5" />
+                  <stop offset="100%" stop-color="#0d47a1" />
+                </linearGradient>
+
+                <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4caf50" />
+                  <stop offset="100%" stop-color="#2e7d32" />
+                </linearGradient>
+
+                <!-- Clip para o Hemisfério Esquerdo (Superfície da Terra) -->
+                <clipPath id="leftHemisphereClip">
+                  <path d="M 200,380 A 180,180 0 0,1 200,20 Z" />
+                </clipPath>
+              </defs>
+
+              <!-- Brilho Atmosférico no Fundo -->
+              <circle cx="200" cy="200" r="192" fill="url(#spaceGlow)" />
+              <path d="M 200,392 A 192,192 0 0,1 200,8" fill="none" stroke="#60a5fa" stroke-width="3" opacity="0.4" />
+
+              <!-- ================= HEMISFÉRIO ESQUERDO (SUPERFÍCIE DA TERRA) ================= -->
+              <g clip-path="url(#leftHemisphereClip)">
+                <!-- Oceanos (Fundo Azul) -->
+                <path d="M 200,380 A 180,180 0 0,1 200,20 Z" fill="url(#oceanGrad)" />
+
+                <!-- Continentes (Silhuetas verdes simplificadas) -->
+                <!-- América do Sul / Central -->
+                <path d="M 120,110 Q 100,160 115,220 T 150,320 Q 165,300 175,250 T 170,160 Q 150,120 120,110 Z"
+                  fill="url(#landGrad)" opacity="0.95" />
+                <!-- América do Norte / Parte da Groenlândia -->
+                <path d="M 90,40 Q 130,35 150,60 T 175,120 Q 160,110 140,115 T 100,90 Z" fill="url(#landGrad)"
+                  opacity="0.95" />
+                <path d="M 130,25 Q 165,20 180,45 T 160,60 Z" fill="#e0f2f1" opacity="0.9" />
+                <!-- Gelo da Groenlândia -->
+
+                <!-- Nuvens decorativas (Brancas com transparência) -->
+                <path d="M 70,100 Q 90,80 110,100 T 150,90" fill="none" stroke="#ffffff" stroke-width="6"
+                  stroke-linecap="round" opacity="0.5" />
+                <path d="M 90,200 Q 110,210 130,190 T 160,220" fill="none" stroke="#ffffff" stroke-width="5"
+                  stroke-linecap="round" opacity="0.4" />
+              </g>
+
+              <!-- Linha divisória vertical (Efeito de Corte 3D) -->
+              <line x1="200" y1="20" x2="200" y2="380" stroke="#475569" stroke-width="2" stroke-dasharray="4 4" />
+
+              <!-- ================= HEMISFÉRIO DIREITO (ESTRUTURA INTERNA - INTERATIVO) ================= -->
+
+              <!-- 1. CROSTA TERRESTRE (Camada mais externa) -->
+              <path id="svg-crust" class="interactive-layer" data-layer="crust"
+                d="M 200,20 A 180,180 0 0,1 200,380 L 200,368 A 168,168 0 0,0 200,32 Z" fill="url(#crustGrad)"
+                stroke="#4e342e" stroke-width="0.5" />
+
+              <!-- 2. MANTO (Camada pastosa intermediária) -->
+              <path id="svg-mantle" class="interactive-layer" data-layer="mantle"
+                d="M 200,32 A 168,168 0 0,1 200,368 L 200,295 A 95,95 0 0,0 200,105 Z" fill="url(#mantleGrad)"
+                stroke="#bf360c" stroke-width="0.5" />
+
+              <!-- 3. NÚCLEO EXTERNO (Camada metálica líquida) -->
+              <path id="svg-outer-core" class="interactive-layer" data-layer="outer-core"
+                d="M 200,105 A 95,95 0 0,1 200,295 L 200,248 A 48,48 0 0,0 200,152 Z" fill="url(#outerCoreGrad)"
+                stroke="#e65100" stroke-width="0.5" />
+
+              <!-- 4. NÚCLEO INTERNO (Centro metálico sólido) -->
+              <path id="svg-inner-core" class="interactive-layer pulse" data-layer="inner-core"
+                d="M 200,152 A 48,48 0 0,1 200,248 Z" fill="url(#innerCoreGrad)" stroke="#ffb300" stroke-width="0.5" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Coluna da Direita: Menu de seleção e Ficha Informativa -->
+        <div class="col-lg-6">
+          <!-- Botões rápidos de seleção -->
+          <div class="list-group list-group-horizontal-md mb-4 glass-card p-2">
+            <a href="#" class="list-group-item list-group-item-action text-center rounded-3 border-0 py-2"
+              data-layer="crust">Crosta</a>
+            <a href="#" class="list-group-item list-group-item-action text-center rounded-3 border-0 py-2"
+              data-layer="mantle">Manto</a>
+            <a href="#" class="list-group-item list-group-item-action text-center rounded-3 border-0 py-2"
+              data-layer="outer-core">Núcleo Ext.</a>
+            <a href="#" class="list-group-item list-group-item-action text-center rounded-3 border-0 py-2"
+              data-layer="inner-core">Núcleo Int.</a>
+          </div>
+
+          <!-- Ficha Informativa Dinâmica -->
+          <div class="info-panel glass-card overflow-hidden">
+            <div id="info-header" class="info-layer-header header-crust">
+              <span id="info-icon" class="fs-2">🌋</span>
+              <h3 id="info-name" class="text-white">Crosta Terrestre</h3>
+            </div>
+
+            <div class="info-layer-body">
+              <!-- Grid de Estatísticas Rápidas -->
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6">
+                  <div class="stat-item">
+                    <div class="stat-label">Espessura / Profundidade</div>
+                    <div id="stat-thickness" class="stat-value">-</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-item">
+                    <div class="stat-label">Temperatura Máxima</div>
+                    <div id="stat-temp" class="stat-value">-</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-item">
+                    <div class="stat-label">Estado Físico</div>
+                    <div id="stat-state" class="stat-value">-</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="stat-item">
+                    <div class="stat-label">Composição Química</div>
+                    <div id="stat-composition" class="stat-value">-</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Descrição Textual -->
+              <h5 class="text-primary mb-2">Resumo Geral</h5>
+              <p id="info-summary" class="text-slate-300 mb-4" style="line-height: 1.6;"></p>
+
+              <!-- Caixa de Curiosidade Lúdica -->
+              <div class="p-3 rounded-3" style="background: rgba(59, 130, 246, 0.05); border-left: 4px solid #3b82f6;">
+                <h6 class="text-info fw-bold mb-1">💡 Curiosidade Incrível!</h6>
+                <p id="info-curiosity" class="text-slate-300 m-0 small" style="line-height: 1.5;"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como os Cientistas Descobriram? -->
+  <section class="py-5">
+    <div class="container">
+      <div class="glass-card study-card">
+        <div class="row align-items-center">
+          <div class="col-md-2 text-center mb-3 mb-md-0">
+            <span style="font-size: 4.5rem;">📈</span>
+          </div>
+          <div class="col-md-10">
+            <h4 class="text-white mb-2">Como sabemos o que há lá dentro?</h4>
+            <p class="text-secondary m-0" style="line-height: 1.6;">
+              Como o ser humano nunca conseguiu cavar além da fina crosta terrestre, nosso conhecimento sobre as
+              profundezas vem da <strong>sismologia</strong>. Ao estudar as vibrações geradas pelos terremotos (chamadas
+              de ondas sísmicas), os cientistas conseguem "enxergar" o interior do planeta. Essas ondas mudam de
+              velocidade e direção se a camada for sólida, líquida ou pastosa, funcionando exatamente como um exame de
+              ultrassom da Terra!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção do Quiz -->
+  <section id="quiz" class="quiz-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="fs-1">🎯</span>
+        <h2 class="text-white mt-2">Quiz do Geólogo Aprendiz</h2>
+        <p class="text-secondary">Será que você prestou atenção? Responda às 5 perguntas abaixo e ganhe o seu
+          certificado espacial!</p>
+      </div>
+
+      <!-- Card do Quiz -->
+      <div class="glass-card quiz-card">
+        <!-- Barra de Progresso -->
+        <div class="progress-container">
+          <div id="progress-bar-fill" class="progress-bar-fill"></div>
+        </div>
+
+        <!-- Conteúdo do Quiz (Dinâmico via JS) -->
+        <div id="quiz-card-content">
+          <div id="question-number" class="quiz-question-number">Pergunta 1 de 5</div>
+          <h3 id="question-text" class="quiz-question-text">-</h3>
+
+          <!-- Container de Opções -->
+          <div id="options-container" class="quiz-options">
+            <!-- Os botões serão inseridos dinamicamente -->
+          </div>
+
+          <!-- Container do Feedback Instantâneo -->
+          <div id="feedback-container"></div>
+
+          <!-- Botão de Próximo -->
+          <div class="text-end mt-4">
+            <button id="next-question-btn" class="btn btn-primary-custom btn-nav d-none">Próxima Pergunta ➔</button>
+          </div>
+        </div>
+
+        <!-- Tela de Resultados Finais (Oculta por padrão) -->
+        <div id="quiz-results-content" class="results-card d-none">
+          <div id="score-badge" class="badge-image">🌍</div>
+          <h2 id="score-title" class="text-white mb-3">Título</h2>
+          <p id="score-text" class="score-text mb-4"></p>
+          <button id="restart-quiz-btn" class="btn btn-primary-custom btn-nav px-5 py-3">Tentar Novamente 🔄</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="py-4 border-top border-dark text-center" style="background: rgba(0,0,0,0.4);">
+    <div class="container">
+      <p class="text-slate-500 m-0 small">
+        © 2026 • Criado para o Ensino Fundamental (6º Ano) • Disciplinas de Ciências e Geografia
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 Bundle JS (inclui Popper) -->
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <!-- Lógica da Aplicação -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
